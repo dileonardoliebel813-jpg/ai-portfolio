@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI 应用与全栈 Web 开发作品集：智能推荐、开源趋势分析、前端交互项目案例。" />
+  <title>AI Product Portfolio | dileonardoliebel813-jpg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top">AI Product Portfolio</a>
+    <nav aria-label="页面导航">
+      <a href="#work">项目案例</a>
+      <a href="#skills">能力地图</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell" data-reveal>
+      <div class="hero-copy">
+        <p class="label">AI Application · Full-Stack Web · Data Automation</p>
+        <h1>AI 应用与全栈项目作品集</h1>
+        <p class="lead">
+          我做过智能推荐、开源数据分析和前端交互项目。这里重点展示项目目标、用户怎么用、系统怎么实现，以及我在项目中完成的具体工作。
+        </p>
+        <div class="hero-highlights" aria-label="核心能力摘要">
+          <div><b>推荐系统</b><span>把预算、场景、风险转成可解释建议</span></div>
+          <div><b>数据自动化</b><span>用 API 和定时任务生成趋势看板</span></div>
+          <div><b>前端交互</b><span>实现 Canvas 游戏与状态规则判断</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#work">查看项目案例</a>
+          <a class="btn secondary" href="https://github.com/dileonardoliebel813-jpg" target="_blank" rel="noreferrer">GitHub 主页</a>
+        </div>
+      </div>
+
+      <aside class="summary-card" aria-label="作品集摘要">
+        <p class="summary-title">一眼看懂我做了什么</p>
+        <div class="summary-list">
+          <div><span>01</span><strong>做了一个帐篷智能推荐系统</strong><p>用户输入预算和使用场景，系统输出首选、低价备选和谨慎选择。</p></div>
+          <div><span>02</span><strong>做了一个 GitHub 趋势排行工具</strong><p>自动抓取开源项目数据，并用评分算法排序展示。</p></div>
+          <div><span>03</span><strong>做了一个网页版五子棋</strong><p>用原生 JavaScript 实现棋盘绘制、落子、悔棋和胜负判断。</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="overview shell" data-reveal>
+      <div class="overview-item">
+        <span>01</span>
+        <h2>能做产品判断</h2>
+        <p>不是只写页面，而是把预算、场景、偏好、风险、数据缺失这些真实约束转成产品逻辑。</p>
+      </div>
+      <div class="overview-item">
+        <span>02</span>
+        <h2>能做工程落地</h2>
+        <p>前端、后端、数据库、API、自动化任务和静态部署都能形成闭环。</p>
+      </div>
+      <div class="overview-item">
+        <span>03</span>
+        <h2>能讲清楚结果</h2>
+        <p>每个项目都强调解释依据、技术取舍和可展示成果，便于面试官快速判断能力。</p>
+      </div>
+    </section>
+
+    <section class="work shell" id="work">
+      <div class="section-title" data-reveal>
+        <p class="label">Selected Case Studies</p>
+        <h2>项目案例</h2>
+      </div>
+
+      <article class="case case-featured" data-reveal>
+        <div class="case-header">
+          <div>
+            <p class="case-index">Case 01 · 主打项目</p>
+            <h3>CampRank 户外帐篷智能推荐系统</h3>
+            <p class="case-subtitle">它不是普通商品列表，而是一个“输入需求 → 筛选商品 → 解释推荐原因 → 提醒购买风险”的决策辅助工具。</p>
+          </div>
+          <div class="case-links">
+            <a class="btn primary small" href="https://github.com/dileonardoliebel813-jpg/camp-rank" target="_blank" rel="noreferrer">查看代码</a>
+            <a class="btn secondary small" href="https://github.com/dileonardoliebel813-jpg/camp-rank#本地运行" target="_blank" rel="noreferrer">本地运行说明</a>
+          </div>
+        </div>
+
+        <div class="camp-explainer">
+          <div class="camp-step">
+            <span>Step 1</span>
+            <h4>用户输入购买需求</h4>
+            <p>预算、露营场景、购买偏好，例如防水优先、性价比优先、售后稳定。</p>
+          </div>
+          <div class="camp-arrow">→</div>
+          <div class="camp-step">
+            <span>Step 2</span>
+            <h4>系统匹配商品数据</h4>
+            <p>比较价格、参数、售后、评论风险，并识别缺失信息。</p>
+          </div>
+          <div class="camp-arrow">→</div>
+          <div class="camp-step">
+            <span>Step 3</span>
+            <h4>输出可解释推荐</h4>
+            <p>给出首选、低价备选、谨慎选择，并说明为什么推荐。</p>
+          </div>
+        </div>
+
+        <div class="camp-showcase">
+          <div class="camp-ui" aria-label="CampRank 使用流程示意">
+            <div class="browser-bar"><i></i><i></i><i></i><span>CampRank recommendation flow</span></div>
+            <div class="camp-ui-body">
+              <section class="input-card">
+                <p>用户需求</p>
+                <div><span>预算</span><strong>¥500 - ¥1200</strong></div>
+                <div><span>场景</span><strong>周末露营 / 防水优先</strong></div>
+                <div><span>偏好</span><strong>性价比 + 售后稳定</strong></div>
+              </section>
+              <section class="ranking-card">
+                <p>推荐结果</p>
+                <div class="rank-item top"><b>首选推荐</b><span>综合匹配高，风险较低</span></div>
+                <div class="rank-item"><b>低价备选</b><span>预算友好，核心需求满足</span></div>
+                <div class="rank-item warn"><b>谨慎选择</b><span>参数缺失或评论风险需确认</span></div>
+              </section>
+              <section class="reason-card">
+                <p>推荐依据</p>
+                <ul>
+                  <li>价格是否落在预算内</li>
+                  <li>参数是否匹配使用场景</li>
+                  <li>售后和评论风险是否可接受</li>
+                  <li>缺失数据不会被当作满足条件</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <div class="case-content camp-copy">
+            <div class="answer-block emphasis">
+              <h4>这个项目直观展示什么？</h4>
+              <p>面试官打开后能看到：用户不是自己翻商品，而是通过系统获得有理由、有风险提示的购买建议。这体现的是推荐逻辑、产品判断和全栈实现能力。</p>
+            </div>
+            <div class="answer-block">
+              <h4>我完成的工作</h4>
+              <ul>
+                <li>设计推荐结果结构：首选、低价备选、谨慎选择。</li>
+                <li>设计匹配规则：预算、场景、偏好、参数、售后、评论风险。</li>
+                <li>实现缺失数据保守处理，避免“看起来都满足”的假推荐。</li>
+                <li>搭建 React + FastAPI + SQLite 的前后端 Demo。</li>
+              </ul>
+            </div>
+            <div class="answer-block compact-list">
+              <h4>技术栈</h4>
+              <div class="pill-row"><span>React</span><span>Vite</span><span>FastAPI</span><span>SQLite</span><span>Ranking Logic</span><span>Vercel</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <div>
+            <p class="case-index">Case 02 · 数据自动化</p>
+            <h3>GitHub Trending 开源趋势排行系统</h3>
+            <p class="case-subtitle">自动抓取热门开源仓库，用评分算法生成趋势榜单，再通过静态页面展示。</p>
+          </div>
+          <div class="case-links">
+            <a class="btn secondary small" href="https://github.com/dileonardoliebel813-jpg/github-trending" target="_blank" rel="noreferrer">代码</a>
+          </div>
+        </div>
+
+        <div class="split-content">
+          <div class="flow-card">
+            <div><span>GitHub API</span><b>抓取仓库数据</b></div>
+            <div><span>Python</span><b>计算热度分数</b></div>
+            <div><span>Actions</span><b>每 6 小时自动更新</b></div>
+            <div><span>Pages</span><b>静态页面展示</b></div>
+          </div>
+          <div class="case-content two-col">
+            <div class="answer-block">
+              <h4>解决的问题</h4>
+              <p>热门项目不能只看 star 总数，还要考虑 fork、活跃时间和更新频率。这个项目把开源趋势发现做成自动化看板。</p>
+            </div>
+            <div class="answer-block">
+              <h4>我做了什么</h4>
+              <ul>
+                <li>用 GitHub REST API 获取多语言热门仓库。</li>
+                <li>设计 stars + forks + 时间衰减的综合评分。</li>
+                <li>用 GitHub Actions 定时刷新数据文件。</li>
+                <li>用原生 HTML/CSS/JS 构建轻量趋势看板。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <div>
+            <p class="case-index">Case 03 · 前端交互基础</p>
+            <h3>Gomoku Game 网页版五子棋</h3>
+            <p class="case-subtitle">用 Canvas 和原生 JavaScript 实现完整棋盘交互、回合状态和胜负判断。</p>
+          </div>
+          <div class="case-links">
+            <a class="btn secondary small" href="https://github.com/dileonardoliebel813-jpg/gomoku-game" target="_blank" rel="noreferrer">代码</a>
+          </div>
+        </div>
+
+        <div class="split-content">
+          <div class="board-shot" aria-label="五子棋棋盘示意">
+            <div class="board-grid">
+              <span style="--x:4;--y:5"></span><span style="--x:5;--y:5"></span><span style="--x:6;--y:5"></span><span style="--x:7;--y:5"></span><span style="--x:8;--y:5"></span>
+              <i style="--x:6;--y:6"></i><i style="--x:7;--y:7"></i><i style="--x:8;--y:8"></i><i style="--x:9;--y:9"></i>
+            </div>
+          </div>
+          <div class="case-content two-col">
+            <div class="answer-block">
+              <h4>解决的问题</h4>
+              <p>通过一个完整的棋类游戏展示前端事件处理、状态管理和规则算法，而不是只做静态页面。</p>
+            </div>
+            <div class="answer-block">
+              <h4>我做了什么</h4>
+              <ul>
+                <li>使用 Canvas 绘制 15×15 棋盘和棋子。</li>
+                <li>实现双人轮流落子、悔棋、重开和平局判断。</li>
+                <li>实现横向、纵向、斜向五连胜检测。</li>
+                <li>无依赖运行，适合展示原生 JavaScript 基础。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="skills shell" id="skills" data-reveal>
+      <div class="section-title">
+        <p class="label">Capability Map</p>
+        <h2>能力地图</h2>
+      </div>
+      <div class="skill-grid">
+        <div><strong>AI 产品思维</strong><p>推荐逻辑、评分模型、风险提示、缺失数据边界、可解释输出。</p></div>
+        <div><strong>全栈开发</strong><p>React、Vite、FastAPI、SQLite、REST API、前后端分离部署。</p></div>
+        <div><strong>数据自动化</strong><p>GitHub API、Python 数据抓取、GitHub Actions 定时任务、静态数据发布。</p></div>
+        <div><strong>前端交互</strong><p>HTML、CSS、JavaScript、Canvas、响应式布局、状态管理和规则判断。</p></div>
+      </div>
+    </section>
+
+    <section class="contact shell" id="contact" data-reveal>
+      <div>
+        <p class="label">Ready to Review</p>
+        <h2>想快速了解我做过什么？先看 CampRank，再看 GitHub Trending。</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary" href="https://github.com/dileonardoliebel813-jpg/camp-rank" target="_blank" rel="noreferrer">查看 CampRank 代码</a>
+        <a class="btn secondary" href="https://github.com/dileonardoliebel813-jpg" target="_blank" rel="noreferrer">查看全部代码</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>AI Product Portfolio</span>
+    <span>Built to show product thinking, engineering execution, and deployable demos.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
