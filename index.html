@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI 应用与全栈 Web 开发作品集：智能推荐、开源趋势分析、前端交互项目案例。" />
+  <meta name="description" content="AI 应用与全栈 Web 开发作品集：简历智能体、智能推荐、开源趋势分析、前端交互项目案例。" />
   <title>AI Product Portfolio | dileonardoliebel813-jpg</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +26,12 @@
         <p class="label">AI Application · Full-Stack Web · Data Automation</p>
         <h1>AI 应用与全栈项目作品集</h1>
         <p class="lead">
-          我做过智能推荐、开源数据分析和前端交互项目。这里重点展示项目目标、用户怎么用、系统怎么实现，以及我在项目中完成的具体工作。
+          我做过简历智能体、智能推荐、开源数据分析和前端交互项目。这里重点展示项目目标、用户怎么用、系统怎么实现，以及我在项目中完成的具体工作。
         </p>
         <div class="hero-highlights" aria-label="核心能力摘要">
+          <div><b>AI Agent 工作流</b><span>把 JD、候选人经历和 ATS 反馈串成简历生成流程</span></div>
           <div><b>推荐系统</b><span>把预算、场景、风险转成可解释建议</span></div>
           <div><b>数据自动化</b><span>用 API 和定时任务生成趋势看板</span></div>
-          <div><b>前端交互</b><span>实现 Canvas 游戏与状态规则判断</span></div>
         </div>
         <div class="hero-actions">
           <a class="btn primary" href="#work">查看项目案例</a>
@@ -42,9 +42,10 @@
       <aside class="summary-card" aria-label="作品集摘要">
         <p class="summary-title">一眼看懂我做了什么</p>
         <div class="summary-list">
-          <div><span>01</span><strong>做了一个帐篷智能推荐系统</strong><p>用户输入预算和使用场景，系统输出首选、低价备选和谨慎选择。</p></div>
-          <div><span>02</span><strong>做了一个 GitHub 趋势排行工具</strong><p>自动抓取开源项目数据，并用评分算法排序展示。</p></div>
-          <div><span>03</span><strong>做了一个网页版五子棋</strong><p>用原生 JavaScript 实现棋盘绘制、落子、悔棋和胜负判断。</p></div>
+          <div><span>01</span><strong>做了一个 JobFit Resume Agent</strong><p>根据岗位 JD 和候选人资料生成匹配岗位的结构化简历，并提供 ATS 审核和事实检查。</p></div>
+          <div><span>02</span><strong>做了一个帐篷智能推荐系统</strong><p>用户输入预算和使用场景，系统输出首选、低价备选和谨慎选择。</p></div>
+          <div><span>03</span><strong>做了一个 GitHub 趋势排行工具</strong><p>自动抓取开源项目数据，并用评分算法排序展示。</p></div>
+          <div><span>04</span><strong>做了一个网页版五子棋</strong><p>用原生 JavaScript 实现棋盘绘制、落子、悔棋和胜负判断。</p></div>
         </div>
       </aside>
     </section>
@@ -76,7 +77,77 @@
       <article class="case case-featured" data-reveal>
         <div class="case-header">
           <div>
-            <p class="case-index">Case 01 · 主打项目</p>
+            <p class="case-index">Case 01 · AI Agent 工作流</p>
+            <h3>JobFit Resume Agent 岗位匹配简历生成系统</h3>
+            <p class="case-subtitle">输入岗位 JD 和候选人资料，系统通过多 Agent 流程完成 JD 分析、经历匹配、简历生成、ATS 审核和事实检查。</p>
+          </div>
+          <div class="case-links">
+            <a class="btn secondary small" href="https://github.com/dileonardoliebel813-jpg/jobfit-resume-agent1" target="_blank" rel="noreferrer">查看代码</a>
+          </div>
+        </div>
+
+        <div class="resume-flow">
+          <div><span>JDProfilerAgent</span><b>拆解岗位要求</b><p>提取职责、技能、关键词和招聘偏好。</p></div>
+          <div><span>HybridMatchAgent</span><b>匹配候选人经历</b><p>把项目经历和岗位要求对应起来。</p></div>
+          <div><span>ResumeWriterAgent</span><b>生成结构化简历</b><p>输出可预览、可导出、可继续审核的简历 JSON。</p></div>
+          <div><span>ATS / Fact Check</span><b>审核与事实校验</b><p>检查关键词覆盖、表达风险和事实一致性。</p></div>
+        </div>
+
+        <div class="split-content">
+          <div class="resume-shot" aria-label="JobFit Resume Agent 工作台示意">
+            <div class="browser-bar"><i></i><i></i><i></i><span>JobFit Resume Agent workspace</span></div>
+            <div class="resume-workspace">
+              <section>
+                <p>JD Analysis</p>
+                <strong>Product AI Engineer</strong>
+                <span>Python · FastAPI · LLM · Evaluation</span>
+              </section>
+              <section>
+                <p>Experience Match</p>
+                <div><b>92%</b><span>项目经历与岗位要求高度匹配</span></div>
+                <div><b>3</b><span>需要补充证据的能力点</span></div>
+              </section>
+              <section>
+                <p>Resume Preview</p>
+                <ul>
+                  <li>改写项目 bullet，突出岗位关键词</li>
+                  <li>生成 ATS review 和 fact check 结果</li>
+                  <li>支持 PDF 导出接口</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <div class="case-content two-col">
+            <div class="answer-block emphasis">
+              <h4>解决的问题</h4>
+              <p>求职者写简历时很难把岗位要求、个人经历和 ATS 关键词统一起来。这个项目把简历改写做成可审核的 AI 工作流，而不是一次性生成文本。</p>
+            </div>
+            <div class="answer-block">
+              <h4>我做了什么</h4>
+              <ul>
+                <li>设计多 Agent 流程：JD 分析、证据构建、经历匹配、策略生成、简历撰写。</li>
+                <li>用 FastAPI 暴露 JD、Profile、Resume、ATS、Export 等后端接口。</li>
+                <li>用 React/Vite/Tailwind 搭建三栏工作台：JD 分析、经历匹配、简历预览。</li>
+                <li>区分 mock 和 real LLM 模式，前端不直接调用模型，统一走后端 LLM client。</li>
+              </ul>
+            </div>
+            <div class="answer-block compact-list">
+              <h4>技术栈</h4>
+              <div class="pill-row"><span>FastAPI</span><span>React</span><span>Vite</span><span>Tailwind</span><span>Pydantic</span><span>LLM Agents</span></div>
+            </div>
+            <div class="answer-block compact-list">
+              <h4>可展示亮点</h4>
+              <p>模块化 Agent、结构化 JSON 输出、ATS 审核、事实检查、PDF 导出接口、后端统一模型调用。</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" data-reveal>
+        <div class="case-header">
+          <div>
+            <p class="case-index">Case 02 · 智能推荐</p>
             <h3>CampRank 户外帐篷智能推荐系统</h3>
             <p class="case-subtitle">它不是普通商品列表，而是一个“输入需求 → 筛选商品 → 解释推荐原因 → 提醒购买风险”的决策辅助工具。</p>
           </div>
@@ -159,7 +230,7 @@
       <article class="case" data-reveal>
         <div class="case-header">
           <div>
-            <p class="case-index">Case 02 · 数据自动化</p>
+            <p class="case-index">Case 03 · 数据自动化</p>
             <h3>GitHub Trending 开源趋势排行系统</h3>
             <p class="case-subtitle">自动抓取热门开源仓库，用评分算法生成趋势榜单，再通过静态页面展示。</p>
           </div>
@@ -197,7 +268,7 @@
       <article class="case" data-reveal>
         <div class="case-header">
           <div>
-            <p class="case-index">Case 03 · 前端交互基础</p>
+            <p class="case-index">Case 04 · 前端交互基础</p>
             <h3>Gomoku Game 网页版五子棋</h3>
             <p class="case-subtitle">用 Canvas 和原生 JavaScript 实现完整棋盘交互、回合状态和胜负判断。</p>
           </div>
@@ -239,6 +310,7 @@
         <h2>能力地图</h2>
       </div>
       <div class="skill-grid">
+        <div><strong>AI Agent 工作流</strong><p>JD 分析、经历匹配、简历生成、ATS 审核、事实检查、结构化输出。</p></div>
         <div><strong>AI 产品思维</strong><p>推荐逻辑、评分模型、风险提示、缺失数据边界、可解释输出。</p></div>
         <div><strong>全栈开发</strong><p>React、Vite、FastAPI、SQLite、REST API、前后端分离部署。</p></div>
         <div><strong>数据自动化</strong><p>GitHub API、Python 数据抓取、GitHub Actions 定时任务、静态数据发布。</p></div>
@@ -249,10 +321,10 @@
     <section class="contact shell" id="contact" data-reveal>
       <div>
         <p class="label">Ready to Review</p>
-        <h2>想快速了解我做过什么？先看 CampRank，再看 GitHub Trending。</h2>
+        <h2>想快速了解我做过什么？先看 JobFit Resume Agent，再看 CampRank 和 GitHub Trending。</h2>
       </div>
       <div class="contact-actions">
-        <a class="btn primary" href="https://dileonardoliebel813-jpg.github.io/camp-rank/" target="_blank" rel="noreferrer">打开 CampRank Demo</a>
+        <a class="btn primary" href="https://github.com/dileonardoliebel813-jpg/jobfit-resume-agent1" target="_blank" rel="noreferrer">打开 JobFit 代码</a>
         <a class="btn secondary" href="https://github.com/dileonardoliebel813-jpg" target="_blank" rel="noreferrer">查看全部代码</a>
       </div>
     </section>
@@ -260,7 +332,7 @@
 
   <footer class="footer shell">
     <span>AI Product Portfolio</span>
-    <span>Built to show product thinking, engineering execution, and deployable demos.</span>
+    <span>Built to show AI agent workflows, product thinking, engineering execution, and deployable demos.</span>
   </footer>
 
   <script src="script.js"></script>

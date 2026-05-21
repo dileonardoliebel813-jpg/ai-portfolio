@@ -829,67 +829,113 @@ h1 {
   transform: translateY(0);
 }
 
-@media (max-width: 960px) {
-  .hero,
-  .overview,
-  .case-grid,
-  .split-content,
-  .skill-grid,
-  .case-content.two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .case-header,
-  .contact,
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .product-shot,
-  .flow-card,
-  .board-shot {
-    min-height: 360px;
-  }
+.resume-flow {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
 }
 
-@media (max-width: 640px) {
-  .shell,
-  .topbar {
-    width: min(100% - 24px, 1160px);
-  }
-
-  .topbar nav {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 64px;
-  }
-
-  h1 {
-    font-size: clamp(2.45rem, 15vw, 4.6rem);
-  }
-
-  .summary-metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .case,
-  .contact {
-    padding: 22px;
-    border-radius: 24px;
-  }
-
-  .product-shot,
-  .flow-card,
-  .board-shot {
-    min-height: 310px;
-  }
+.resume-flow div {
+  padding: 18px;
+  border: 1px solid #dbe6f6;
+  border-radius: 20px;
+  background: #f8fbff;
 }
 
+.resume-flow span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-flow b {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 1.02rem;
+}
+
+.resume-flow p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.resume-shot {
+  min-height: 470px;
+  padding: 18px;
+  border: 1px solid #d7e2f3;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(37, 87, 214, 0.16), transparent 220px),
+    radial-gradient(circle at 82% 10%, rgba(21, 184, 212, 0.16), transparent 260px),
+    #f5f8ff;
+}
+
+.resume-workspace {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.resume-workspace section {
+  padding: 18px;
+  border: 1px solid #e1e8f4;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.07);
+}
+
+.resume-workspace p {
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-workspace strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.resume-workspace span {
+  color: var(--muted);
+}
+
+.resume-workspace div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.resume-workspace div:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.resume-workspace b {
+  min-width: 56px;
+  color: var(--blue);
+  font-size: 1.6rem;
+}
+
+.resume-workspace li {
+  color: var(--muted);
+  line-height: 1.6;
+}
 
 @media (max-width: 960px) {
+  .resume-flow,
   .hero-highlights,
   .camp-explainer,
   .camp-showcase,
@@ -911,16 +957,74 @@ h1 {
 }
 
 @media (max-width: 640px) {
-  .hero {
-    padding-top: 52px;
+  body {
+    overflow-x: hidden;
   }
 
-  h1 {
-    font-size: clamp(2.2rem, 12vw, 3.6rem);
+  .shell,
+  .topbar {
+    width: min(100% - 24px, 1160px);
+  }
+
+  .topbar nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 52px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-copy,
+  .summary-card {
+    min-width: 0;
   }
 
   .hero-highlights {
-    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .label {
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
+  .summary-list span {
+    letter-spacing: 0.04em;
+  }
+
+  .contact,
+  .case {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .resume-flow,
+  .case-content.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-shot {
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .resume-workspace div {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .camp-ui {
