@@ -19,11 +19,21 @@ mkdir -p "$ROOT" "$STATIC_ROOT"
 clone_or_update() {
   local repo_url="$1"
   local dir="$2"
+  local preferred_branch="${3:-main}"
+  local branch="$preferred_branch"
   if [ ! -d "$dir/.git" ]; then
     git clone "$repo_url" "$dir"
   fi
-  git -C "$dir" fetch origin main
-  git -C "$dir" reset --hard origin/main
+  if ! git ls-remote --exit-code --heads "$repo_url" "$branch" >/dev/null 2>&1; then
+    branch="$(git -C "$dir" remote show origin | sed -n '/HEAD branch/s/.*: //p')"
+  fi
+  if [ -z "$branch" ]; then
+    echo "ERROR: Cannot detect default branch for $repo_url"
+    exit 1
+  fi
+  echo "    using branch: $branch"
+  git -C "$dir" fetch origin "$branch"
+  git -C "$dir" reset --hard "origin/$branch"
 }
 
 echo "==> Updating repositories"
